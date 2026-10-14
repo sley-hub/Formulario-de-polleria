@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pollería CFK</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bona+Nova+SC:wght@400;700&family=Caudex:wght@400;700&family=Oi&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <main class="contenedor">
+      <form action="" class="formulario" id="formulario">
+        <h2>Realiza tu pedido</h2>
+        <p class="descripcion">
+          Completa tus datos y disfruta de nuestro delicioso pollo.
+        </p>
+
+        <fieldset class="grupo">
+          <legend class="titulo-grupo">Datos personales</legend>
+
+          <label for="nombre">Nombre completo</label>
+          <input
+            type="text"
+            id="nombre"
+            name="nombre"
+            placeholder="Tu nombre"
+            required
+          />
+
+          <label for="number">Teléfono</label>
+          <input
+            type="tel"
+            id="number"
+            name="number"
+            placeholder="Tu número de teléfono"
+            required
+          />
+        </fieldset>
+
+        <fieldset class="grupo">
+          <legend class="titulo-grupo">Opciones de pollo</legend>
+
+          <select id="opciones" name="opciones" required>
+            <option value="">Selecciona una opción</option>
+            <option value="pollo_1-8">1/8 de pollo a la brasa (S/.12.00)</option>
+            <option value="pollo_1-4">1/4 de pollo a la brasa (S/.18.00)</option>
+            <option value="pollo_monstrito">Monstrito (S/.15.00)</option>
+            <option value="salchipapas">Salchipapas (S/.10.00)</option>
+          </select>
+        </fieldset>
+
+        <fieldset class="grupo">
+          <legend class="titulo-grupo">Extras</legend>
+
+          <label class="opcion">
+            <input type="checkbox" name="extras" value="gaseosa" />
+            Gaseosa <span>(+S/ 5.00)</span>
+          </label>
+
+          <label class="opcion">
+            <input type="checkbox" name="extras" value="papas" />
+            Papas fritas <span>(+S/ 5.00)</span>
+          </label>
+
+          <label class="opcion">
+            <input type="checkbox" name="extras" value="cremas" />
+            Extra de cremas <span>(+S/ 4.00)</span>
+          </label>
+        </fieldset>
+
+        <fieldset class="grupo">
+          <legend class="titulo-grupo">Cantidad</legend>
+          <label for="cantidad">Selecciona la cantidad</label>
+          <input
+            type="number"
+            id="cantidad"
+            name="cantidad"
+            min="1"
+            value="1"
+            required
+          />
+        </fieldset>
+
+        <fieldset class="grupo">
+          <legend class="titulo-grupo">Tipo de entrega</legend>
+
+          <label class="opcion">
+            <input
+              type="radio"
+              id="domicilio"
+              name="entrega"
+              value="domicilio"
+              required
+            />
+            Domicilio <span>(+S/ 5.00)</span>
+          </label>
+
+          <label class="opcion">
+            <input type="radio" id="retiro" name="entrega" value="retiro" />
+            Retiro en local
+          </label>
+        </fieldset>
+
+        <button type="submit">Realizar pedido</button>
+        <p id="mensaje" class="msg" role="status" aria-live="polite"></p>
+      </form>
+
+      <section class="caja">
+        <p class="subtitulo">SABOR QUE ENAMORA</p>
+        <h1>Pollería CFK</h1>
+
+        <div class="separador"></div>
+
+        <h2>¡El verdadero sabor del pollo a la brasa!</h2>
+
+        <p class="mensaje">
+          Disfruta de nuestro delicioso pollo, acompañado de papitas crocantes,
+          cremas y mucho sabor.
+        </p>
+
+        <div class="beneficios">
+          <p>Preparado al momento</p>
+          <p>Acompañamientos deliciosos</p>
+          <p>Hecho para compartir</p>
+        </div>
+
+        <p class="frase">¡Tu antojo, nuestra especialidad!</p>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
